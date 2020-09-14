@@ -2,11 +2,11 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 
-const generateMD = require("./utils/generateMarkdown")
+const generateMarkdown = require("./utils/generateMarkdown");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 // array of questions for user
-function questions() {
+function questionsPrompt() {
     return inquirer.prompt([
         {
             type: "input",
@@ -68,8 +68,15 @@ function questions() {
 //function writeToFile(fileName, data) {}
 
 // function to initialize program
-function init() {
-
+async function init() {
+    try {
+        const answers = await questionsPrompt();
+        const README = generateMarkdown(answers);
+        await writeFileAsync("README.md", README);
+        console.log("Success! You have created your README.md!");
+    } catch(err) {
+        console.log(err);
+    }
 }
 
 // function call to initialize program
