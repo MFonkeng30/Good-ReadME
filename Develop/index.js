@@ -16,17 +16,17 @@ function questionsPrompt() {
         {
             type: "input",
             name: "description",
-            message: "Please provide a brief description of your application."
+            message: "Please provide a brief description of your application:"
         },
         {
             type: "input",
             name: "installation",
-            message: "Please provide any instructions or requirements for installation."
+            message: "Please provide any instructions or requirements for installation:"
         },
         {
             type: "input",
             name: "usage",
-            message: "What is the primary usage of your application."
+            message: "What is the primary usage of your application:"
         },
         {
             type: "input",
@@ -41,18 +41,18 @@ function questionsPrompt() {
         {
             type: "input",
             name: "contributors",
-            message: "Please include any contributors"
+            message: "Please include any contributors:"
         },
         {
             type: "input",
             name: "tests",
-            message: "Please list any tests that you would like to include for your application"
+            message: "Please list any tests that you would like to include for your application:"
 
         },
         {
             type: "input",
             name: "github",
-            message: "What is your gitub?"
+            message: "What is your github?"
 
         },
         {
