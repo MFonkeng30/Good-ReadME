@@ -70,6 +70,18 @@ function questionsPrompt() {
 // function to initialize program
 async function init() {
     try {
+        if (answers.licenses === "Apache 2.0 License") {
+      
+            answers.link = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+        }
+        if (answers.licenses === "The MIT License") {
+
+            answers.link = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+        }
+        if (answers.licenses === "GNU GPL v3 License") {
+      
+            answers.link = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+        }
         const answers = await questionsPrompt();
         const README = generateMarkdown(answers);
         await writeFileAsync("README.md", README);
