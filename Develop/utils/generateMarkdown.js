@@ -24,7 +24,7 @@ function generateMarkdown(data) {
   ## License
   ${data.license} 
 
-  
+  ${data.link}
 
   ## Contributors
   ${data.contributors}
