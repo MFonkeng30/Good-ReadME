@@ -70,6 +70,8 @@ function questionsPrompt() {
 // function to initialize program
 async function init() {
     try {
+        const answers = await questionsPrompt();
+        
         if (answers.licenses === "Apache 2.0 License") {
       
             answers.link = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
@@ -82,7 +84,6 @@ async function init() {
       
             answers.link = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
         }
-        const answers = await questionsPrompt();
         const README = generateMarkdown(answers);
         await writeFileAsync("README.md", README);
         console.log("Success! You have created your README.md!");
