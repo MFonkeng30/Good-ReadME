@@ -22,12 +22,12 @@
   The primary usage of this application will be assisting web developers in the creation of markdown files for any type of app or project. In an everchanging world, the web continues to be a major part of everyday life and constantly evolving as more web programs and applications are being introduced. In response to that, I believe that web developers will need a way to quickly and effectively create and add markdown files.
 
   ## License
-  Apache 2.0 License 
+  MIT License 
 
   ![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
 
   ## Contributors
-  None	
+  None
 
   ## Tests
   None
