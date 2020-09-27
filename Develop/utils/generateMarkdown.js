@@ -21,6 +21,8 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
 
+  Link to demo video: https://youtu.be/xevOLTvkemU
+
   ## License
   ${data.license} 
 
